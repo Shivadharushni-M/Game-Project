@@ -1,1 +1,1 @@
-I have created a Memory Quest Challenge using html, css and javascripy
+I have created a Memory Quest Challenge using html, css and javascript
