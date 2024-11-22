@@ -1,0 +1,85 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        #ff0000,
+        #ff0000 10px,
+        #ffff00 10px,
+        #ffff00 20px,
+        #00ff00 20px,
+        #00ff00 30px,
+        #0000ff 30px,
+        #0000ff 40px,
+        #ff00ff 40px,
+        #ff00ff 50px,
+        #00ffff 50px,
+        #00ffff 60px
+    );
+    font-family: 'Arial', sans-serif;
+}
+#game-title { color: #f3f1f1;
+      font-size: 3rem; 
+     margin-bottom: 20px;
+      padding: 10px 20px; 
+       border: 3px solid #ece7e7; 
+        border-radius: 10px;
+         background-color: #080808;
+         font-family: 'Permanent Marker', cursive; }
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+    background: repeating-linear-gradient( 0deg, #000000, #000000 50%, #ffffff 50%, #ffffff 100% );
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #000080; /* Navy blue */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transform: perspective(600px) rotateY(0deg);
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+}
+
+.card.flipped {
+    background-color: #ffffff;
+    cursor: default;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+#message {
+    font-size: 1.5rem;
+    color: #121211;
+    margin-bottom: 20px;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #000080; /* Navy blue */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#restart-button:hover {
+    background-color: #000066;
+}
