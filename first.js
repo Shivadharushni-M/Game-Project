@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         flippedCards = [];
         matchedPairs = 0;
 
-        // Duplicate and shuffle icons
+        
         const shuffledIcons = shuffle([...icons, ...icons]);
 
-        // Create cards
+       
         shuffledIcons.forEach(icon => {
             const card = document.createElement('div');
             card.classList.add('card');
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleCardClick(e) {
         const card = e.target;
 
-        // Ignore click if card is already flipped or two cards are already flipped
+       
         if (card.classList.contains('flipped') || flippedCards.length === 2) {
             return;
         }
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.classList.add('flipped');
         flippedCards.push(card);
 
-        // Check for a match
+       
         if (flippedCards.length === 2) {
             checkForMatch();
         }
